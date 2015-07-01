@@ -1,0 +1,65 @@
+Quick setup — if you've done this kind of thing before
+ssh->  git@github.com:dhirajtekade/php_git.git
+https-> https://github.com/dhirajtekade/php_git.git
+
+******************************************************************************
+1) ISSUE 1: if faced access denied issue on git init, then check the local repository if folder is read only, give access to it. I think we need read,write,delete access for this..
+2) ISSUE 2: if faced issue on login to accound, you need to follow the commands given there to gitconfig the email address and username as given
+- i think it was like:
+-> gitconfig --global.email "dhirajtekade@gmail.com"
+-> gitconfig --global.username "dhirajekade"		 
+
+
+
+******************************************************************************
+Just an example: 
+1)…or create a new repository on the command line
+
+echo # php_git >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/dhirajtekade/php_git.git
+git push -u origin master
+
+// with these commands I was able to import my local files in Git repository
+// it ask me for my username and password and uploaded the changes in Git repository
+
+2)…or push an existing repository from the command line
+
+git remote add origin https://github.com/dhirajtekade/php_git.git
+git push -u origin master
+
+3)…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+**********************************************************************************************
+
+
+ ProTip! Use the URL[https://github.com/dhirajtekade/php_git] when adding GitHub as a remote.
+
+**********************************************************************************************
+
+
+/*chmusica Theme*/
+
+mkdir chmusica
+cd chmusica
+git init
+git remote add -t ch.netspan.xaraya.themes.chmusica -f origin https://github.com/random777/themes
+git checkout origin/ch.netspan.xaraya.themes.chmusica
+git checkout -b ch.netspan.xaraya.themes.chmusica
+git pull
+
+git add .
+git status
+git add -u
+git status
+git commit -a -m "Reverted previous changes for insert members"
+git push
+
+git commit --amend -m "Next week URL changes"
+
+**********************************************************************************************
+
+
